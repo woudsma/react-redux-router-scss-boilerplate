@@ -5,18 +5,24 @@ Opinionated boilerplate with modified ESLint configuration (no semicolons, less 
 Try changing state and navigating between routes. Uses `react-transition-group` for page transitions.
 
 ### Installation
-- `git clone https://github.com/woudsma/react-redux-router-scss-boilerplate my-project`  
-- `cd my-project`  
-- `npm install`  
+```
+git clone https://github.com/woudsma/react-redux-router-scss-boilerplate my-project
+cd my-project
+npm install
+```
 
 ### Development
-- `npm start`  
+```
+npm start
+```
 
 Only edit `.scss` files, `.css` files are compiled and reloaded automatically.  
 Create a `.env.local` file to store local environment variables.
 
 ### Production
-- `npm run build`  
+```
+npm run build
+```
 
 Running the `build` script (defined in `package.json`) creates an optimized production build, and outputs static files to the `/build` folder.  
 
