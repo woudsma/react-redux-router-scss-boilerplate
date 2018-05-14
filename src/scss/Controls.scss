@@ -1,5 +1,10 @@
 @import '_variables';
 
 .Controls {
-  
+  margin: $margin 0;
+
+  button {
+    margin-right: $margin / 2;
+    font-size: 0.75em;
+  }
 }

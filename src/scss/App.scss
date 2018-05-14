@@ -18,6 +18,11 @@
     box-sizing: border-box;
     padding: $padding;
 
+    h2 {
+      margin: 0;
+      margin-bottom: $margin;
+    }
+
     span {
       display: block;
     }

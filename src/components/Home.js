@@ -12,10 +12,10 @@ class Home extends Component {
 
     return (
       <div className={homeClass}>
-        <span>Home page component</span><br />
-        <Controls /><br />
-        <span>App initialized: {JSON.stringify(this.props.initialized)}</span><br />
+        <h2>Home component</h2>
         <span>Go to <Link to="/page">Page</Link></span>
+        <Controls />
+        <span>App initialized: {JSON.stringify(this.props.initialized)}</span>
       </div>
     )
   }

@@ -11,9 +11,9 @@ class Page extends Component {
 
     return (
       <div className={pageClass}>
-        <span>Page component</span><br />
-        <Controls /><br />
+        <h2>Page component</h2>
         <span>Go to <Link to="/">Home</Link></span>
+        <Controls />
       </div>
     )
   }

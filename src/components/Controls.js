@@ -10,8 +10,14 @@ class Controls extends Component {
 
     return (
       <div className={controlsClass}>
-        <span>Redux app state: {JSON.stringify(this.props.app)}</span>
-        <span>Redux router state: {JSON.stringify(this.props.router)}</span>
+        <span>
+          Redux app state:
+          <pre>{JSON.stringify(this.props.app)}</pre>
+        </span>
+        <span>
+          Redux router state:
+          <pre>{JSON.stringify(this.props.router)}</pre>
+        </span>
 
         <button onClick={() => this.props.dispatch(app.initApp())}>
           Dispatch initApp
