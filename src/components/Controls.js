@@ -18,14 +18,19 @@ class Controls extends Component {
         </p>
 
         <span>Actions:</span>
-        <button onClick={() => this.props.dispatch(app.initApp())}>
-          Dispatch initApp
-        </button>
+        {!this.props.app.initialized
+          ? (
+            <button onClick={() => this.props.dispatch(app.initApp())}>
+              Dispatch initApp
+            </button>
+          ) : (
+            <button onClick={() => this.props.dispatch(app.resetApp())}>
+              Dispatch resetApp
+            </button>
+          )
+        }
         <button onClick={() => this.props.dispatch(app.incrementCounter())}>
           Dispatch incrementCounter
-        </button>
-        <button onClick={() => this.props.dispatch(app.resetApp())}>
-          Dispatch resetApp
         </button>
       </div>
     )
