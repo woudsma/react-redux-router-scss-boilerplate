@@ -1,0 +1,46 @@
+@import '_variables';
+
+.App {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(0%);
+  min-width: $breakpoint;
+
+  @media screen and (max-width: $breakpoint) {
+    min-width: initial;
+    width: 100%;
+  }
+
+  > div {
+    position: absolute;
+    width: 100%;
+    margin-top: $margin;
+    box-sizing: border-box;
+    padding: $padding;
+
+    span {
+      display: block;
+    }
+  }
+
+  // Page transitions
+  .fade-enter {
+    transition: opacity $transitionSpeed ease;
+    opacity: 0;
+  }
+
+  .fade-enter.fade-enter-active {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .fade-exit {
+    transition: opacity $transitionSpeed ease;
+    opacity: 1;
+  }
+
+  .fade-exit.fade-exit-active {
+    opacity: 0;
+    z-index: 0;
+  }
+}

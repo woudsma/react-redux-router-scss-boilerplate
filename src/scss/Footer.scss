@@ -1,0 +1,9 @@
+@import '_variables';
+
+.Footer {
+  position: absolute;
+  bottom: $margin;
+  left: 50%;
+  transform: translateX(-50%) translateY(0%);
+  z-index: 999;
+}
