@@ -17,7 +17,7 @@ class App extends Component {
       <main>
         <Route render={({ location }) => (
           <TransitionGroup className={appClass}>
-            <CSSTransition key={location.key} classNames="fade" timeout={1000}>
+            <CSSTransition key={location.key} classNames="fade" timeout={350}>
               <Switch location={location}>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/page" component={Page} />
@@ -32,6 +32,4 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => state
-
-export default connect(mapStateToProps)(App)
+export default connect()(App)

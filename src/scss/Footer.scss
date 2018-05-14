@@ -1,16 +1,16 @@
 @import '_variables';
 
 .Footer {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(0%);
   z-index: 999;
+  position: absolute;
+  bottom: $margin;
+  left: 50%;
+  transform: translateX(-50%) translateY(50%);
   opacity: 0;
   transition: all $transitionSpeed ease;
 
   &.visible {
-    bottom: $margin;
+    transform: translateX(-50%) translateY(0%);
     opacity: 1;
   }
 }
