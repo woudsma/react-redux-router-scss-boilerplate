@@ -18,9 +18,9 @@ Create a `.env.local` file to store local environment variables.
 ### Production
 - `npm run build`  
 
-Running the `build` script (defined in `package.json`) creates an optimized production build, and outputs static files to the `build` folder.  
+Running the `build` script (defined in `package.json`) creates an optimized production build, and outputs static files to the `/build` folder.  
 
-The included `Dockerfile` provides zero-configuration deploys to e.g. [Dokku](http://dokku.viewdocs.io/dokku/). The `nginx.default.conf` file makes sure GET requests get routed properly with [React Router](https://github.com/ReactTraining/react-router) when hosted from a Docker container using NGINX.
+The included `Dockerfile` provides zero-configuration deploys to e.g. [Dokku](http://dokku.viewdocs.io/dokku/). The `nginx.default.conf` file makes sure requests get handled properly by [React Router](https://github.com/ReactTraining/react-router) when hosting from a Docker container, using NGINX as a static file server.
 
 ---
 
