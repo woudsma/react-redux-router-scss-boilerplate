@@ -2,8 +2,15 @@
 
 .Footer {
   position: absolute;
-  bottom: $margin;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%) translateY(0%);
   z-index: 999;
+  opacity: 0;
+  transition: all $transitionSpeed ease;
+
+  &.visible {
+    bottom: $margin;
+    opacity: 1;
+  }
 }
