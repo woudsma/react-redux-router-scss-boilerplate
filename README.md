@@ -1,5 +1,8 @@
-## React + Redux + Router (v4) + SCSS boilerplate
-Opinionated boilerplate with modified ESLint configuration (no semicolons, less strict about ARIA) for quick use with the benefits of `create-react-app`, SCSS and `eslint-config-airbnb`. Using [react-scripts@2.0](https://github.com/facebook/create-react-app/issues/3815).
+## React + Redux + React Router (v4) + SCSS boilerplate
+Opinionated boilerplate with modified ESLint configuration (no semicolons, less strict about ARIA) for quick use with the benefits of [create-react-app](https://github.com/facebook/create-react-app), SCSS and `eslint-config-airbnb`. Using [react-scripts@2.0](https://github.com/facebook/create-react-app/issues/3815).  
+
+#### [DEMO](https://react-redux-router.skating.team/)
+Try changing state and navigating between routes. Uses `react-transition-group` for page transitions.
 
 ### Installation
 - `git clone https://github.com/woudsma/react-redux-router-scss-boilerplate my-project`  
@@ -15,7 +18,9 @@ Create a `.env.local` file to store local environment variables.
 ### Production
 - `npm run build`  
 
-Running the `build` script (defined in `package.json`) creates an optimized production build, and outputs static files to the `build/` folder.
+Running the `build` script (defined in `package.json`) creates an optimized production build, and outputs static files to the `build` folder.  
+
+The included `Dockerfile` provides zero-configuration deploys to e.g. [Dokku](http://dokku.viewdocs.io/dokku/). The `nginx.default.conf` file makes sure GET requests get routed properly with [React Router](https://github.com/ReactTraining/react-router) when hosted from a Docker container using NGINX.
 
 ---
 
