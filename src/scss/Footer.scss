@@ -10,14 +10,17 @@
   opacity: 0;
   transition: all $transitionSpeed ease;
   min-width: $breakpoint;
-  background-color: ghostwhite;
+  background-color: white;
   padding: $padding;
   box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px 10px rgba(0, 0, 0, 0.01);
 
   @media screen and (max-width: $breakpoint) {
     min-width: initial;
     width: 100%;
     bottom: 0;
+    border-radius: 0;
   }
 
   a {
