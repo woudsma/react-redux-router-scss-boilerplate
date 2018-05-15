@@ -17,21 +17,23 @@ class Controls extends Component {
           <pre>{JSON.stringify(this.props.router)}</pre>
         </p>
 
-        <span>Actions:</span>
-        {!this.props.app.initialized
-          ? (
-            <button onClick={() => this.props.dispatch(app.initApp())}>
-              Dispatch initApp
-            </button>
-          ) : (
-            <button onClick={() => this.props.dispatch(app.resetApp())}>
-              Dispatch resetApp
-            </button>
-          )
-        }
-        <button onClick={() => this.props.dispatch(app.incrementCounter())}>
-          Dispatch incrementCounter
-        </button>
+        <p>
+          <span>Actions:</span>
+          {!this.props.app.initialized
+            ? (
+              <button onClick={() => this.props.dispatch(app.initApp())}>
+                Dispatch initApp
+              </button>
+            ) : (
+              <button onClick={() => this.props.dispatch(app.resetApp())}>
+                Dispatch resetApp
+              </button>
+            )
+          }
+          <button onClick={() => this.props.dispatch(app.incrementCounter())}>
+            Dispatch incrementCounter
+          </button>
+        </p>
       </div>
     )
   }

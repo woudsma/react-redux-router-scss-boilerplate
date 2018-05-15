@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import classNames from 'classnames'
 import '../css/Footer.css'
 
@@ -11,7 +12,8 @@ class Footer extends Component {
 
     return (
       <div className={footerClass}>
-        Footer
+        <span>Footer</span>
+        <Link to="/about">About</Link>
       </div>
     )
   }
