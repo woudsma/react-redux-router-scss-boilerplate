@@ -12,9 +12,9 @@ class Controls extends Component {
       <div className={controlsClass}>
         <p>
           Redux app state:
-          <pre>{JSON.stringify(this.props.app)}</pre>
+          <pre>{JSON.stringify(this.props.app, null, 2)}</pre>
           Redux router state:
-          <pre>{JSON.stringify(this.props.router)}</pre>
+          <pre>{JSON.stringify(this.props.router, null, 2)}</pre>
         </p>
 
         <p>
