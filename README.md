@@ -1,4 +1,4 @@
-## React + Redux + React Router (v4) + SCSS boilerplate
+## React + Redux + React Router (v4) + SCSS boilerplate 📡
 Opinionated boilerplate with modified ESLint configuration (no semicolons, less strict about ARIA) for quick use with the benefits of [create-react-app](https://github.com/facebook/create-react-app), SCSS and `eslint-config-airbnb`. Using [react-scripts@2.0](https://github.com/facebook/create-react-app/issues/3815).  
 
 #### [DEMO](https://react-redux-router.skating.team/)
