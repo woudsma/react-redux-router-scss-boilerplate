@@ -2,6 +2,7 @@ import constants from '../actions/constants'
 
 const initialState = {
   initialized: false,
+  transitions: true,
   counter: 0,
 }
 
@@ -13,15 +14,21 @@ export default (state = initialState, action) => {
         initialized: true,
       }
 
+    case constants.RESET_APP:
+      return {
+        ...initialState,
+      }
+
     case constants.INCREMENT_COUNTER:
       return {
         ...state,
         counter: state.counter + 1,
       }
 
-    case constants.RESET_APP:
+    case constants.TOGGLE_TRANSITIONS:
       return {
-        ...initialState,
+        ...state,
+        transitions: !state.transitions,
       }
 
     default:

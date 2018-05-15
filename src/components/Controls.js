@@ -33,6 +33,11 @@ class Controls extends Component {
               Dispatch incrementCounter
             </button>
           }
+          {this.props.app.initialized &&
+            <button onClick={() => this.props.dispatch(app.toggleTransitions())}>
+              Dispatch toggleTransitions
+            </button>
+          }
         </p>
       </div>
     )

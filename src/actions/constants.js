@@ -5,4 +5,5 @@ export default keyMirror({
   INIT_APP: null,
   RESET_APP: null,
   INCREMENT_COUNTER: null,
+  TOGGLE_TRANSITIONS: null,
 })
