@@ -28,9 +28,11 @@ class Controls extends Component {
               </button>
             )
           }
-          <button onClick={() => this.props.dispatch(app.incrementCounter())}>
-            Dispatch incrementCounter
-          </button>
+          {this.props.app.initialized &&
+            <button onClick={() => this.props.dispatch(app.incrementCounter())}>
+              Dispatch incrementCounter
+            </button>
+          }
         </p>
       </div>
     )
