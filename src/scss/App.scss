@@ -3,42 +3,58 @@
 .App {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%) translateY(0%);
+  top: 0;
+  transform: translateX(-50%);
   min-width: $breakpoint;
-
-  @media screen and (max-width: $breakpoint) {
-    min-width: initial;
-    width: 100%;
-  }
 
   > div {
     position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%) scale(1);
     width: 100%;
-    margin-top: $margin;
     box-sizing: border-box;
     padding: 0 $padding;
+    margin-top: $margin;
 
     h2 {
       margin: $margin 0;
     }
   }
 
+  @media screen and (max-width: $breakpoint) {
+    min-width: initial;
+    width: 100%;
+
+    > div {
+      margin-top: 0;
+    }
+  }
+
   // Page transitions
   .fade-enter {
-    transition: $transitionSpeed;
-    opacity: 0;
+    transition: transform $transitionSpeed, opacity $transitionSpeed;
+    transition-timing-function: ease-out;
+    opacity: 0.5;
+    transform: translateX(-50%) scale(0.975);
   }
 
   .fade-enter.fade-enter-active {
     opacity: 1;
+    transform: translateX(-50%) scale(1);
+    z-index: 1;
   }
 
   .fade-exit {
-    transition: $transitionSpeed;
+    transition: transform $transitionSpeed, opacity $transitionSpeed / 4;
+    transition-timing-function: ease;
     opacity: 1;
+    transform: translateX(-50%) scale(1);
   }
 
   .fade-exit.fade-exit-active {
     opacity: 0;
+    transform: translateX(-50%) scale(0.975);
+    z-index: 0;
   }
 }

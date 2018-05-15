@@ -2,12 +2,11 @@
 
 .Controls {
   margin: $margin 0;
-  padding: $margin 0;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 
   p {
-    margin: 0;
+    line-height: 0.9em;
   }
 
   button {
