@@ -32,27 +32,27 @@
   }
 
   // Page transitions
-  .fade-enter {
+  > div.fade-enter {
     transition: transform $transitionSpeed, opacity $transitionSpeed;
     transition-timing-function: ease-out;
     opacity: 0.5;
     transform: translateX(-50%) scale(0.975);
   }
 
-  .fade-enter.fade-enter-active {
+  > div.fade-enter.fade-enter-active {
     opacity: 1;
     transform: translateX(-50%) scale(1);
     z-index: 1;
   }
 
-  .fade-exit {
+  > div.fade-exit {
     transition: transform $transitionSpeed, opacity $transitionSpeed / 4;
     transition-timing-function: ease;
     opacity: 1;
     transform: translateX(-50%) scale(1);
   }
 
-  .fade-exit.fade-exit-active {
+  > div.fade-exit.fade-exit-active {
     opacity: 0;
     transform: translateX(-50%) scale(0.975);
     z-index: 0;
