@@ -4,6 +4,7 @@ const initialState = {
   initialized: false,
   transitions: true,
   counter: 0,
+  data: null,
 }
 
 export default (state = initialState, action) => {
@@ -30,6 +31,12 @@ export default (state = initialState, action) => {
       return {
         ...state,
         transitions: !state.transitions,
+      }
+
+    case constants.LOAD_DATA:
+      return {
+        ...state,
+        data: action.data,
       }
 
     default:

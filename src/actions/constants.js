@@ -6,4 +6,5 @@ export default keyMirror({
   RESET_APP: null,
   INCREMENT_COUNTER: null,
   TOGGLE_TRANSITIONS: null,
+  LOAD_DATA: null,
 })

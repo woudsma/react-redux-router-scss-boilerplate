@@ -10,40 +10,43 @@ class Controls extends Component {
 
     return (
       <div className={controlsClass}>
-        <p>
-          <span>Redux state:</span>
-          <pre>{JSON.stringify(this.props, null, 2)}</pre>
-        </p>
+        <p>Redux state:</p>
+        <pre>{JSON.stringify(this.props, null, 2)}</pre>
 
-        <p>
-          <span>Actions:</span>
-          {!this.props.app.initialized
-            ? (
-              <button onClick={() => this.props.dispatch(app.initApp())}>
-                Dispatch initApp
-              </button>
-            ) : (
-              <button onClick={() => this.props.dispatch(app.resetApp())}>
-                Dispatch resetApp
-              </button>
-            )
-          }
-          {this.props.app.initialized &&
-            <button onClick={() => this.props.dispatch(app.incrementCounter())}>
-              Dispatch incrementCounter
+        <p>Actions:</p>
+        {!this.props.app.initialized
+          ? (
+            <button onClick={() => this.props.dispatch(app.initApp())}>
+              Dispatch initApp
             </button>
-          }
-          {this.props.app.initialized &&
-            <button onClick={() => this.props.dispatch(app.toggleTransitions())}>
-              Dispatch toggleTransitions
+          ) : (
+            <button onClick={() => this.props.dispatch(app.resetApp())}>
+              Dispatch resetApp
             </button>
-          }
-        </p>
+          )
+        }
+        {this.props.app.initialized &&
+          <button onClick={() => this.props.dispatch(app.incrementCounter())}>
+            Dispatch incrementCounter
+          </button>
+        }
+        {this.props.app.initialized &&
+          <button onClick={() => this.props.dispatch(app.toggleTransitions())}>
+            Dispatch toggleTransitions
+          </button>
+        }
+        {this.props.app.initialized && !this.props.app.data &&
+          <button onClick={() => this.props.dispatch(app.loadData())}>
+            Dispatch loadData
+          </button>
+        }
       </div>
     )
   }
 }
 
-const mapStateToProps = state => state
+const mapStateToProps = state => ({
+  ...state,
+})
 
 export default connect(mapStateToProps)(Controls)
