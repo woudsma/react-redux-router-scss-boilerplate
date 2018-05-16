@@ -7,13 +7,15 @@ import Controls from './Controls'
 
 class Page extends Component {
   render() {
-    const pageClass = classNames('Page', {})
+    const pageClass = classNames('Page', {
+      someStyle: true,
+    })
 
     return (
       <div className={pageClass}>
         <h2>Page component</h2>
         <span>Go to <Link to="/">Home</Link></span>
-        <Controls myProp="Hello" myOtherProp={new Date()} />
+        <Controls myProp="Hello" myOtherProp={{ pageClass }} />
       </div>
     )
   }
