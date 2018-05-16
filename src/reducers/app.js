@@ -12,7 +12,6 @@ export default (state = initialState, action) => {
       return {
         ...state,
         initialized: true,
-        transitions: true,
       }
 
     case constants.RESET_APP:
