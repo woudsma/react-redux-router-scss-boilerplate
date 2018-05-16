@@ -13,7 +13,7 @@ class Page extends Component {
       <div className={pageClass}>
         <h2>Page component</h2>
         <span>Go to <Link to="/">Home</Link></span>
-        <Controls />
+        <Controls myProp="Hello" myOtherProp={new Date()} />
       </div>
     )
   }
