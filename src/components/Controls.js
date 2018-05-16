@@ -11,7 +11,7 @@ class Controls extends Component {
     return (
       <div className={controlsClass}>
         <p>
-          Redux state:
+          <span>Redux state:</span>
           <pre>{JSON.stringify(this.props, null, 2)}</pre>
         </p>
 
