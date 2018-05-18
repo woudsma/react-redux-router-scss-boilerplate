@@ -10,7 +10,7 @@ class Controls extends Component {
 
     return (
       <div className={controlsClass}>
-        <p>Redux state:</p>
+        <p>Redux state + component props:</p>
         <pre>{JSON.stringify(this.props, null, 2)}</pre>
 
         <p>Actions:</p>
@@ -45,8 +45,6 @@ class Controls extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  ...state,
-})
+const mapStateToProps = state => state
 
 export default connect(mapStateToProps)(Controls)
