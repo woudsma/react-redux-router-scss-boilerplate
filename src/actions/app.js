@@ -16,7 +16,7 @@ export const toggleTransitions = () => (dispatch, getState) => {
 }
 
 export const loadData = () => async (dispatch, getState) => {
-  const { data } = await axios.get('https://jsonplaceholder.typicode.com/posts/1')
+  const { data } = await axios.get(`${process.env.REACT_APP_API_ENDPOINT}/posts/1`)
   dispatch({ type: constants.LOAD_DATA, data })
 }
 
